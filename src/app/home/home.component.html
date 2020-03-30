@@ -1,0 +1,27 @@
+
+
+<div class="main-container">
+    <img src="https://www.recipethis.com/wp-content/uploads/Homemade-Easy-Strawberry-Milkshake.jpg" width="25%">
+    <div class=main-text>
+        <h2>Strawberry Milkshake</h2> <span>Total Likes : {{LikeCounter}}</span> <span class="likeButton" (click)="LikeClick()">+1 </span>
+        <p>Full-service restaurants, ice cream shops, soda fountains, diners, and people at home usually prepare and mix the shake by hand from scoops of ice cream and milk in a blender or drink mixer. Hand-blended milkshakes are traditionally made from any flavor of ice cream; additional flavorings, such as chocolate syrup, malt syrup, or malted milk powder, can be added prior to mixing. This allows a greater variety than is available in machine-made shakes.</p>
+        <p>Many fast food outlets do not make shakes by hand with ice cream; instead, they make shakes in automatic milkshake machines which freeze and serve a pre-made milkshake mixture consisting of milk, a sweetened flavoring agent, and a thickening agent. These are similar to soft-serve ice cream machines, but keep the shake at a drinkable consistency.</p>
+    </div>
+
+</div>
+<div class="play-container">
+    <h2>Reviews</h2>
+    <hr>
+    <ol>
+        <li *ngFor="let dispcomm of comments">
+          <p class="comment">{{dispcomm}}</p>
+        </li>
+    </ol>
+    <div class="input">
+        <h3>Submit Your Review</h3> 
+        <input type="text" [(ngModel)]="comment">
+        <p>
+            <span (click)="submit()">Submit Comment</span>
+        </p>
+    </div>
+</div>
